@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extended Git Command Reference Table by Ziad AL-Doais version 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        caption { font-size: 1.5em; margin-bottom: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Extended Git Command Reference Table</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Git command</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>mkdir myfolder</td>
+                <td>Create a new directory (OS-level, not tracked by Git unless it contains files)</td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>touch newfile.txt</td>
+                <td>Create a new file (Linux/Mac/Git Bash)</td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>echo "Hello" > hello.txt</td>
+                <td>Create a file with content</td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>git add newfile.txt</td>
+                <td>Add the newly created file to staging</td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>git commit -m "Add new file"</td>
+                <td>Commit the staged new file</td>
+            </tr>
+    
+            <tr>
+                <td>6</td>
+                <td>echo "New content" > file.txt</td>
+                <td>Replace contents of a file</td>
+            </tr>
+    
+            <tr>
+                <td>7</td>
+                <td>git add file.txt</td>
+                <td>Stage the modified file</td>
+            </tr>
+    
+            <tr>
+                <td>8</td>
+                <td>git commit -m "Update file content"</td>
+                <td>Commit the modified file</td>
+            </tr>
+    
+            <tr>
+                <td>9</td>
+                <td>git mv oldname.txt newname.txt</td>
+                <td>Rename a file</td>
+            </tr>
+    
+            <tr>
+                <td>10</td>
+                <td>git mv file.txt folder/file.txt</td>
+                <td>Move file to another directory</td>
+            </tr>
+    
+            <tr>
+                <td>11</td>
+                <td>git commit -m "Rename file or move to folder"</td>
+                <td>Commit the rename/move action</td>
+            </tr>
+    
+            <tr>
+                <td>12</td>
+                <td>git rm file.txt</td>
+                <td>Delete a file and stage the deletion</td>
+            </tr>
+    
+            <tr>
+                <td>13</td>
+                <td>git rm -r folder/</td>
+                <td>Delete a directory and its contents</td>
+            </tr>
+    
+            <tr>
+                <td>14</td>
+                <td>git commit -m "Delete file or folder"</td>
+                <td>Commit the deletion</td>
+            </tr>
+    
+            <tr>
+                <td>15</td>
+                <td>git clean -n</td>
+                <td>Preview untracked files to be removed</td>
+            </tr>
+    
+            <tr>
+                <td>16</td>
+                <td>git clean -f</td>
+                <td>Remove untracked files from working directory</td>
+            </tr>
+    
+            <tr>
+                <td>17</td>
+                <td>git checkout -- file.txt</td>
+                <td>Discard changes in a specific file</td>
+            </tr>
+    
+            <tr>
+                <td>18</td>
+                <td>git restore file.txt</td>
+                <td>Restore file to last committed state</td>
+            </tr>
+    
+            <tr>
+                <td>19</td>
+                <td>git diff file.txt</td>
+                <td>Show unstaged changes in the file</td>
+            </tr>
+    
+            <tr>
+                <td>20</td>
+                <td>git reset file.txt</td>
+                <td>Unstage a file that was previously added</td>
+            </tr>
+    
+            <tr>
+                <td>21</td>
+                <td>git grep "text"</td>
+                <td>Search for text in tracked files</td>
+            </tr>
+    
+            <tr>
+                <td>22</td>
+                <td>git grep -i "text"</td>
+                <td>Case-insensitive search</td>
+            </tr>
+    
+            <tr>
+                <td>23</td>
+                <td>git grep -l "text"</td>
+                <td>Show filenames containing the text</td>
+            </tr>
+    
+            <tr>
+                <td>24</td>
+                <td>git grep -il "text"</td>
+                <td>Case-insensitive filenames only</td>
+            </tr>
+    
+            <tr>
+                <td>25</td>
+                <td>git log --grep="keyword"</td>
+                <td>Search commit messages by keyword</td>
+            </tr>
+    
+            <tr>
+                <td>26</td>
+                <td>git log --author="name"</td>
+                <td>Filter commit history by author</td>
+            </tr>
+    
+            <tr>
+                <td>27</td>
+                <td>git log -S"text"</td>
+                <td>Find commits that add/remove specific string</td>
+            </tr>
+    
+            <tr>
+                <td>28</td>
+                <td>git blame file.txt</td>
+                <td>Show who changed each line and when</td>
+            </tr>
+    
+            <tr>
+                <td>29</td>
+                <td>git log --oneline</td>
+                <td>Show concise commit history</td>
+            </tr>
+    
+            <tr>
+                <td>30</td>
+                <td>git log --graph</td>
+                <td>Display commit history as a graph</td>
+            </tr>
+    
+            <tr>
+                <td>31</td>
+                <td>git log --since="2 weeks ago"</td>
+                <td>Show commits within a date range</td>
+            </tr>
+    
+            <tr>
+                <td>32</td>
+                <td>git log -p</td>
+                <td>Show diffs introduced in each commit</td>
+            </tr>
+    
+            <tr>
+                <td>33</td>
+                <td>git log -G"pattern"</td>
+                <td>Search commits where code matches regex pattern</td>
+            </tr>
+    
+            <tr>
+                <td>34</td>
+                <td>git blame <file></td>
+                <td>Show who last modified each line in a file</td>
+            </tr>
+    
+            <tr>
+                <td>35</td>
+                <td>git show <commit></td>
+                <td>Display details and changes of a specific commit</td>
+            </tr>
+    
+            <tr>
+                <td>36</td>
+                <td>git show <file></td>
+                <td>Show file content from the latest commit</td>
+            </tr>
+    
+            <tr>
+                <td>37</td>
+                <td>git diff <commit1> <commit2></td>
+                <td>Compare changes between two commits</td>
+            </tr>
+    
+            <tr>
+                <td>38</td>
+                <td>git ls-files</td>
+                <td>List all tracked files</td>
+            </tr>
+    
+            <tr>
+                <td>39</td>
+                <td>git ls-files | grep "pattern"</td>
+                <td>Filter tracked files using a search pattern</td>
+            </tr>
+    
+            <tr>
+                <td>40</td>
+                <td>git rev-list --all | xargs git grep "text"</td>
+                <td>Search for text across all commits (deep search)</td>
+            </tr>
+    
+        </tbody>
+    </table>
+</body>
+</html>
