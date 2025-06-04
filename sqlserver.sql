@@ -1,1 +1,2 @@
-Select username,password from user
+Select username,password,id from user
+
