@@ -1,1 +1,1 @@
-Select userName from user
+Select userName.id from user
